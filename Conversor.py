@@ -1,3 +1,6 @@
+__author__: "Javier E. Aguirre"
+__Version__: "2021.06.21"
+
 def decimal(num, a):
     "Convierte un número (primer parámetro 'num') de sistema en base 2 a 16 (segundo parámetro 'a')."
     global dec
@@ -54,13 +57,14 @@ def conversor(num, a, b):
     except:
         exit()
 
-num = input("Ingrese número a convertir: ")
-a = 0
-b = 0
-while a not in range(2, 17):
-    a = int(input("Indique en qué base está expresado el número anterior (2 a 16):"))
-while b not in range(2, 17):
-    b = int(input("Indique a qué base desea convertir (2 a 16): "))
+if __name__ == __main__:
+    num = input("Ingrese número a convertir: ")
+    a = 0
+    b = 0
+    while a not in range(2, 17):
+        a = int(input("Indique en qué base está expresado el número anterior (2 a 16):"))
+    while b not in range(2, 17):
+        b = int(input("Indique a qué base desea convertir (2 a 16): "))
 
-print(conversor(num, a, b))
+    print(conversor(num, a, b))
     
